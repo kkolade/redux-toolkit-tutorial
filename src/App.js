@@ -1,4 +1,16 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+import Navbar from './components/Navbar';
+import { store } from './store';
 function App() {
-  return <h2>Redux Toolkit</h2>;
+  return (
+    <div className="App">
+      <React.StrictMode>
+        <Provider store={store}>
+          <Navbar />
+        </Provider>
+      </React.StrictMode>
+    </div>
+  );
 }
 export default App;
